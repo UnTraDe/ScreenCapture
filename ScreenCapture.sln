@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScreenCapture", "ScreenCapture\ScreenCapture.vcxproj", "{27117B5D-E910-4768-8994-016761672153}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Injector", "Injector\Injector.vcxproj", "{79715C77-67F5-47C0-A3FB-A44AB21CACD7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27117B5D-E910-4768-8994-016761672153} = {27117B5D-E910-4768-8994-016761672153}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27117B5D-E910-4768-8994-016761672153}.Debug|Win32.ActiveCfg = Debug|Win32
+		{27117B5D-E910-4768-8994-016761672153}.Debug|Win32.Build.0 = Debug|Win32
+		{27117B5D-E910-4768-8994-016761672153}.Release|Win32.ActiveCfg = Release|Win32
+		{27117B5D-E910-4768-8994-016761672153}.Release|Win32.Build.0 = Release|Win32
+		{79715C77-67F5-47C0-A3FB-A44AB21CACD7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{79715C77-67F5-47C0-A3FB-A44AB21CACD7}.Debug|Win32.Build.0 = Debug|Win32
+		{79715C77-67F5-47C0-A3FB-A44AB21CACD7}.Release|Win32.ActiveCfg = Release|Win32
+		{79715C77-67F5-47C0-A3FB-A44AB21CACD7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
