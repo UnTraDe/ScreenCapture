@@ -101,17 +101,17 @@ void SetupHook(void* originalFunc, void* hookFunc)
 	address = (DWORD)originalFunc + sizeof(instruction);
 }
 
-bool temp = false;
+bool first = true;
+ScreenCapture* screenCapture;
+
 
 __declspec(naked) HRESULT EndScene_Hook(IDirect3DDevice9* device)
 {
 	if (device != NULL)
 	{
-		if (!temp)
-		{
-			ScreenCapture::Capture(device);
-			temp = true;
-		}
+		if (first)
+			screenCapture = new ScreenCapture();
+		
 	}
 	
 	__asm
