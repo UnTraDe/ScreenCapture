@@ -5,7 +5,7 @@
 #include <d3dx9.h>
 #include <DxErr.h>
 #include <Vfw.h>
-#include "DXHook.h"
+#include "D3D9Hook.h"
 
 #pragma comment(lib, "d3d9.lib")
 #pragma comment(lib, "d3dx9.lib")

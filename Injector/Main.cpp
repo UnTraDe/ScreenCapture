@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 	//TODO Find the dll path dynamically
-	const char* dllPath = "C:\\Users\\UnTra_000\\Source\\Repos\\RAFReader\\ScreenCapture\\Release\\ScreenCapture.dll";
+	const char* dllPath = "C:\\Users\\UnTra_000\\Source\\Repos\\ScreenCapture\\Debug\\ScreenCapture.dll";
 
 	/* Find Process ID */
 	int processID = Helper::GetProcessID("Terraria.exe");

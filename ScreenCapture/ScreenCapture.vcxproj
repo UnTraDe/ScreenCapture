@@ -80,13 +80,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DXHook.cpp" />
+    <ClCompile Include="D3D9Hook.cpp" />
     <ClCompile Include="Hook.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ScreenCapture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DXHook.h" />
+    <ClInclude Include="D3D9Hook.h" />
     <ClInclude Include="Hook.h" />
     <ClInclude Include="ScreenCapture.h" />
   </ItemGroup>

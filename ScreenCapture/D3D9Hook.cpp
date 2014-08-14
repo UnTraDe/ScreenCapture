@@ -1,11 +1,10 @@
-#include "DXHook.h"
-
+#include "D3D9Hook.h"
 #include "ScreenCapture.h"
 
 /* DirectX 9 Hooking */
 
 //Hooks
-HRESULT EndScene_Hook(IDirect3DDevice9* device);
+void EndScene_Hook();
 void SetupHook(void* originalFunc, void* hookFunc);
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
@@ -105,13 +104,27 @@ bool first = true;
 ScreenCapture* screenCapture;
 
 
-__declspec(naked) HRESULT EndScene_Hook(IDirect3DDevice9* device)
+__declspec(naked) void EndScene_Hook()
 {
-	if (device != NULL)
+
+	__asm
 	{
-		if (first)
-			screenCapture = new ScreenCapture();
-		
+		PUSH EAX
+		MOV EAX, [ESP + 8]		
+	}
+
+	IDirect3DDevice9* device;
+
+	__asm
+	{
+		MOV device, EAX
+		POP EAX
+	}
+	
+	if (first)
+	{
+		ScreenCapture::ScreenShot(device);
+		first = false;
 	}
 	
 	__asm

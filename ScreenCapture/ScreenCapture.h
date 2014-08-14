@@ -4,5 +4,6 @@
 
 class ScreenCapture
 {
+public:
 	static void ScreenShot(IDirect3DDevice9* device);
 };
